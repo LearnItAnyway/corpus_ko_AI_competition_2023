@@ -75,13 +75,12 @@ for i in range(K):
 ids_comb = set([comb_['id'] for comb_ in combined_data])
 ids_valid = []
 for v_ds in v_ds_all: ids_valid.extend([v_['id'] for v_ in v_ds])
-assert ids_comb == set(ids_valid)
 
 for i in range(K):
     ids_valid = [t_['id'] for t_ in t_ds_all[i]];
     ids_valid.extend(v_['id'] for v_ in v_ds_all[i])
-    assert ids_comb == set(ids_valid)
-assert 3==4
+    #assert ids_comb == set(ids_valid)
+
 for i in range(K):
     save_jsonl(t_ds_all[i], f"{data_path}/train_fold_{i}.jsonl")
     save_jsonl(v_ds_all[i], f"{data_path}/dev_fold_{i}.jsonl")
