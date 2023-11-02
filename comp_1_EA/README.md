@@ -63,7 +63,7 @@ After saving the trainable parameters, we extract the features of data in dev an
 If the model has been trained without lora, you can evaluate using
 
 ```
-python eval_1.py --llm ./output --data_path --data_path NIKL_EA_2023/dev_fold_${I}.jsonl  --save_name ${P}_fold_${I} --batch_size 64 
+python eval.py --llm ./output --data_path --data_path NIKL_EA_2023/dev_fold_${I}.jsonl  --save_name ${P}_fold_${I} --batch_size 64 
 ```
 
 If the model has been trained with lora, you can evaluate using
